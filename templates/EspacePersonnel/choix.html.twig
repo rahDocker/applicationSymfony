@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+ {{ parent() }}
+ <link  rel="stylesheet" href="/ressources/css/show.css"/>
+ {% endblock %}
+{% block body %}
+
+<div>
+{{ include('EspacePersonnel/show.html.twig') }}
+</div>
+
+<br>
+<a id="add" href="#">
+  <span>Add File!</span>
+</a>
+
+<div class="addFile">
+{{ form_start(form) }}
+    <div class="title">
+     {{ form_row(form.name,{'attr':{'class':'form-control file'}}) }}
+     {{ form_row(form.title,{'attr':{'class':'form-control file'}}) }}
+     </div>
+    <button type="submit" class="btn btn-primary btn-md submitBtn">Confirm File</button>
+{{ form_end(form) }}
+</div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+

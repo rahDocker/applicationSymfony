@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+{{ parent() }}
+{% endblock %}
+{% block body %}
+
+<body id="LoginForm">
+    <div class="container">
+        <div class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <table id="table_id" class="display">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Upload File</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in list %}
+                            <tr>
+                                <td>{{ i.title }}</td>
+                                <td><a href="{{ asset('uploads/' ~ i.name) }}" download>(File)</a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+</body>
+
+{% endblock %}
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+
+

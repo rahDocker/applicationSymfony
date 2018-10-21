@@ -1,0 +1,63 @@
+body {
+  background: #e7e8e9;
+  padding: 40px;
+}
+
+#add {
+	background-image: linear-gradient(to right, black 0%, pink 100%);
+	border-radius: 40px;
+  box-sizing: border-box;
+	color: black;
+	display: block;
+	font: 1.125rem 'Oswald', Arial, sans-serif; /*18*/
+	height: 80px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	padding: 4px;
+	position: relative;
+  text-decoration: none;
+	text-transform: uppercase;
+	width: 264px;
+	z-index: 2;
+    margin-top: -169px;
+    margin-left: 42%;
+}
+
+#add:hover {
+	color: #fff;
+}
+
+#add span {
+	align-items: center;
+	background: #e7e8e9;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	transition: background .5s ease;
+	width: 100%;
+}
+
+#add:hover span {
+	background: transparent;
+}
+
+.title label{
+    display:none !important;
+    margin-top: 7px !important;
+}
+
+.file{
+    margin-left: -17%;
+    width: 59% !important;
+}
+
+.addFile{
+	  display:none;
+		margin-top: -205px;
+    margin-left: 42%;
+}
+
+.submitBtn{
+	  margin-top: 10px;
+}

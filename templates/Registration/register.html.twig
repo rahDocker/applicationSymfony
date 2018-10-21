@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+{{ parent() }}
+{% endblock %}
+{% block body %}
+<style>
+    label{
+        display:none !important;
+    }
+</style>
+
+
+<body id="LoginForm">
+    <div class="container">
+        <div class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Register !</h2>
+                </div>
+                {{ form_start(form) }}
+                <div id="Login">
+                    <div class="form-group">
+
+                        {{ form_row(form.firstName,{'attr':{'class':'form-control' ,'placeholder':"First name" }})}}
+
+                    </div>
+
+                    <div class="form-group">
+
+                        {{ form_row(form.lastName,{'attr':{'class':'form-control','placeholder':"Last name" }})}}
+
+                    </div>
+
+                    <div class="form-group">
+
+                        {{ form_row(form.email,{'attr':{'class':'form-control','placeholder':"Email" }})}}
+
+                    </div>
+
+                    <div class="form-group">
+
+                        {{ form_row(form.password.first,{'attr':{'class':'form-control','placeholder':"Password" }})}}
+
+                    </div>
+                    <div class="form-group">
+
+                        {{ form_row(form.password.second,{'attr':{'class':'form-control','placeholder':"Confirm password" }})}}
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">register</button>
+
+                </div> 
+                {{ form_end(form) }}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+
+{% endblock %}
